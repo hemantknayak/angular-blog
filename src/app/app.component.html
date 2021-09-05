@@ -1,4 +1,10 @@
 <h1>Hello World</h1>
 <h2>{{appName}}</h2>
+<h1 style="background-color: blue;">Key up event</h1>
+<input type="text" #inpt (keyup)="myEvent(inpt.value)"  />
+<h1 style="background-color:blueviolet">Keyup enter key event</h1>
+<input type="text" #inpt1 (keyup.enter)="myEvent(inpt1.value)"  />
+<h1 style="background-color:chocolate">Multiple events on same element</h1>
+<input type="text" #inpt2 (keyup)="myEvent(inpt2.value)" (keyup.enter)="myEvent(inpt2.value)"  />
 <app-login></app-login>
 <app-signup></app-signup>
